@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.adminlive.preetyadminpanel.agency.ui.home.AgencyHomeFragment"
+        android:label="fragment_agency_home"
+        tools:layout="@layout/fragment_agency_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_agencyHostDetailsFragment"
+            app:destination="@id/agencyHostDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileAgencyFragment"
+        android:name="com.adminlive.preetyadminpanel.agency.ui.profile.ProfileAgencyFragment"
+        android:label="fragment_profile_agency"
+        tools:layout="@layout/fragment_profile_agency" />
+    <fragment
+        android:id="@+id/agencyHostDetailsFragment"
+        android:name="com.adminlive.preetyadminpanel.agency.ui.home.AgencyHostDetailsFragment"
+        android:label="fragment_agency_host_details"
+        tools:layout="@layout/fragment_agency_host_details" />
+</navigation>

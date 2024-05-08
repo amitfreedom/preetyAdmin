@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.adminlive.preetyadminpanel.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_User"
+        android:name="com.adminlive.preetyadminpanel.ui.users.UsersFragment"
+        android:label="Users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_nav_User_to_allUsersFragment"
+            app:destination="@id/allUsersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_User_to_liveUserListFragment"
+            app:destination="@id/liveUserListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_Host"
+        android:name="com.adminlive.preetyadminpanel.ui.host.HostFragment"
+        android:label="Host Request"
+        tools:layout="@layout/fragment_host" >
+        <action
+            android:id="@+id/action_nav_Host_to_hostRequestFragment"
+            app:destination="@id/hostRequestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_manage_agency"
+        android:name="com.adminlive.preetyadminpanel.ui.agency.ManageAgencyFragment"
+        android:label="Manage Agency"
+        tools:layout="@layout/fragment_manage_agency" >
+        <action
+            android:id="@+id/action_nav_manage_agency_to_createAgencyFragment"
+            app:destination="@id/createAgencyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_manage_agency_to_agencyListFragment"
+            app:destination="@id/agencyListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAgencyFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.agency.fragment.CreateAgencyFragment"
+        android:label="Create Agency"
+        tools:layout="@layout/fragment_create_agency" />
+    <fragment
+        android:id="@+id/hostRequestFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.host.fragments.HostRequestFragment"
+        android:label="Host Request"
+        tools:layout="@layout/fragment_host_request" >
+        <action
+            android:id="@+id/action_hostRequestFragment_to_requestDetailsFragment"
+            app:destination="@id/requestDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestDetailsFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.host.fragments.RequestDetailsFragment"
+        android:label="Request Details"
+        tools:layout="@layout/fragment_request_details" />
+    <fragment
+        android:id="@+id/allUsersFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.users.AllUsersFragment"
+        android:label="Users"
+        tools:layout="@layout/fragment_all_users" />
+    <fragment
+        android:id="@+id/liveUserListFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.users.LiveUserListFragment"
+        android:label="Live Users"
+        tools:layout="@layout/fragment_live_user_list" />
+    <fragment
+        android:id="@+id/agencyListFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.agency.fragment.AgencyListFragment"
+        android:label="Agency List"
+        tools:layout="@layout/fragment_agency_list" />
+</navigation>

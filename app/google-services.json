@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "1028466326950",
+    "firebase_url": "https://prettydemo-48691-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "prettydemo-48691",
+    "storage_bucket": "prettydemo-48691.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028466326950:android:ae14e9958b20365000a367",
+        "android_client_info": {
+          "package_name": "com.adminlive.preetyadminpanel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028466326950-2aiggd8a4hpk2859m2pvjfvnrfujn0ol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adminlive.preetyadminpanel",
+            "certificate_hash": "bd921dc99bad6d953055396daa5969f277c461ab"
+          }
+        },
+        {
+          "client_id": "1028466326950-odbs8cthu3r53p9avaap00bnp62gvn7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBi4C8r6ahrVhuOFFCPDhvOHaaTPpRXuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028466326950-odbs8cthu3r53p9avaap00bnp62gvn7n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1028466326950-v691sbqm9c4okm55dn3f50mbogs8omqb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.responsiveAdminDashboard"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028466326950:android:bc5a1f5640fa84ff00a367",
+        "android_client_info": {
+          "package_name": "com.stream.adminpanel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028466326950-8p9rlugonbag7e4k4l0dhgv6t6uklqoq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stream.adminpanel",
+            "certificate_hash": "6a57872f97806c5f796cb7d5f3fd6844da06c616"
+          }
+        },
+        {
+          "client_id": "1028466326950-odbs8cthu3r53p9avaap00bnp62gvn7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBi4C8r6ahrVhuOFFCPDhvOHaaTPpRXuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028466326950-odbs8cthu3r53p9avaap00bnp62gvn7n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1028466326950-v691sbqm9c4okm55dn3f50mbogs8omqb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.responsiveAdminDashboard"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028466326950:android:ea05dde1db54e54e00a367",
+        "android_client_info": {
+          "package_name": "com.stream.prettylive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028466326950-6j8cp2m04pj7d98bkhftqs029hrpr0ek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stream.prettylive",
+            "certificate_hash": "6a57872f97806c5f796cb7d5f3fd6844da06c616"
+          }
+        },
+        {
+          "client_id": "1028466326950-qedliain76koo6qe40o3m5mhbg6tsv9t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stream.prettylive",
+            "certificate_hash": "f48b25e1062d759dc34fd018362b147e548cb964"
+          }
+        },
+        {
+          "client_id": "1028466326950-u41pkecoupjiijt8vbr71n13fb52k6af.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stream.prettylive",
+            "certificate_hash": "bd921dc99bad6d953055396daa5969f277c461ab"
+          }
+        },
+        {
+          "client_id": "1028466326950-odbs8cthu3r53p9avaap00bnp62gvn7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBi4C8r6ahrVhuOFFCPDhvOHaaTPpRXuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028466326950-odbs8cthu3r53p9avaap00bnp62gvn7n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1028466326950-v691sbqm9c4okm55dn3f50mbogs8omqb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.responsiveAdminDashboard"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

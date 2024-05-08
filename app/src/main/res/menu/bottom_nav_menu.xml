@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/group__1_"
+        android:title="@string/users" />
+
+    <item
+        android:id="@+id/profileAgencyFragment"
+        android:icon="@drawable/user__1_"
+        android:title="Profile" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_profile"-->
+<!--        android:icon="@drawable/user123"-->
+<!--        android:title="@string/title_profile" />-->
+
+</menu>

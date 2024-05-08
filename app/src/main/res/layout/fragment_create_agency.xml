@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.agency.fragment.CreateAgencyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            style="@style/HeaderTextStyle"
+            android:text="@string/txt_agency_name" />
+
+        <EditText
+            android:id="@+id/txt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/txt_agency_name"
+            android:inputType="textCapWords|textCapSentences"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:autofillHints="" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderTextStyle"
+            android:text="@string/txt_agency_code" />
+
+        <EditText
+            android:id="@+id/txt_agencyNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/txt_agency_code"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:autofillHints="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/HeaderTextStyle"
+            android:text="@string/txt_phone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                app:ccp_showFlag="false"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoFormatNumber="true"
+                android:gravity="center"
+                app:ccp_textSize="@dimen/_14sp"
+                app:ccp_contentColor="@color/gray"/>
+
+
+            <EditText
+                android:id="@+id/txt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@id/ccp"
+                android:background="@android:color/transparent"
+                android:hint="@string/txt_phone_hint"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+        </RelativeLayout>
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/txt_phone"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:background="@drawable/edit_text_bg"-->
+        <!--            android:fontFamily="@font/sf_pro_display_regular"-->
+        <!--            android:hint="@string/txt_phone_hint"-->
+        <!--            android:inputType="phone"-->
+        <!--            android:minHeight="48dp"-->
+        <!--            android:textSize="@dimen/_14sp"-->
+        <!--            android:padding="10dp"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textColorHint="@color/light_gray"-->
+        <!--            android:autofillHints="" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            style="@style/HeaderTextStyle"
+            android:text="@string/txt_email" />
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/txt_email_hint"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textSize="@dimen/_14sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:autofillHints="" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/txt_password"
+            style="@style/HeaderTextStyle"/>
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/txt_password_hint"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:autofillHints="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/txt_confirm_password"
+            style="@style/HeaderTextStyle"/>
+
+        <EditText
+            android:id="@+id/txt_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/txt_password_hint"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:autofillHints="" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_up"
+            style="@style/MyButtonStyle_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/txt_create"
+            android:textAllCaps="true"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</ScrollView>

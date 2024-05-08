@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_User"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_user" />
+
+        <item
+            android:id="@+id/nav_Host"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_host" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_agency"-->
+<!--            android:icon="@drawable/ic_menu_gallery"-->
+<!--            android:title="@string/menu_agency" />-->
+
+        <item
+            android:id="@+id/nav_manage_agency"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_manage_agency" />
+
+        <item
+            android:id="@+id/nav_sub_admin"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_sub_admin" />
+
+    </group>
+
+    <group android:id="@+id/message">
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_message" />
+
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_statistics" />
+    </group>
+
+    <group android:id="@+id/report">
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_report" />
+
+        <item
+            android:id="@+id/nav_recharge"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_recharge" />
+    </group>
+
+    <group android:id="@+id/account">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_account" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_settings" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_logout" />
+
+    </group>
+
+</menu>
