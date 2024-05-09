@@ -121,6 +121,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Block"
+                                android:textSize="12sp"
+                                android:textAllCaps="false"
                                 android:backgroundTint="@color/pink_top"
                                 android:layout_marginTop="@dimen/_10dp"/>
 

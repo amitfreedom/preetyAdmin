@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -47,6 +46,7 @@ public class HomeFragment extends Fragment {
     private LatestMemberAdapter latestMemberAdapter;
     private TopOptionsAdapter topOptionsAdapter;
     private String userId="";
+    private boolean isDisable=false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -74,7 +74,9 @@ public class HomeFragment extends Fragment {
             startActivity(new Intent(requireActivity(), ViewAllLatestMembersActivity.class).putExtra(SCREEN_TYPE,"latest_member"));
         });
         binding.btnBlockUnblock.setOnClickListener(view -> {
-            setDisabledStatus(userId,false);
+            setDisabledStatus(requireActivity(),userId,isDisable);
+            binding.etUserId.getText().clear();
+            binding.cardViewBlockUser.setVisibility(View.GONE);
         });
         binding.btnContinue.setOnClickListener(view -> {
             String blockUserId = binding.etUserId.getText().toString().trim();
@@ -88,13 +90,15 @@ public class HomeFragment extends Fragment {
                     public void onUserDetailsFetched(UserDetailsModel userDetails) {
                         binding.cardViewBlockUser.setVisibility(View.VISIBLE);
                         userId=userDetails.getUserId();
+                        isDisable=userDetails.isDisabled();
+
                         try {
                             if (!Objects.equals(userDetails.getImage(), "")){
                                 Glide.with(requireActivity()).load(userDetails.getImage()).into(binding.tvUserImage);
                             }else {
                                 Glide.with(requireActivity()).load(USER_PLACEHOLDER_PATH).into(binding.tvUserImage);
                             }
-                            binding.tvBlockName.setText(userDetails.getUsername());
+                            binding.tvBlockName.setText(userDetails.getUsername().toUpperCase());
                             binding.tvBlockId.setText("ID : "+userDetails.getUid());
                             if (userDetails.isDisabled()){
                                 binding.btnBlockUnblock.setText("UnBlock");

@@ -4,15 +4,19 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.adminlive.preetyadminpanel.ApplicationClass;
+import androidx.fragment.app.FragmentActivity;
+
 import com.adminlive.preetyadminpanel.Constant;
 import com.adminlive.preetyadminpanel.ui.home.models.UserDetailsModel;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class FirebaseUserHelper {
 private Context context;
@@ -28,21 +32,48 @@ private Context context;
 
     // Function to enable or disable a user in Firestore
     //kjfgjgfj
-    public static void setDisabledStatus(String userId, boolean disabled) {
+    public static void setDisabledStatus(FragmentActivity fragmentActivity, String userId, boolean disabled) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection(Constant.LOGIN_DETAILS).document(userId)
-                .update("disabled", disabled)
-                .addOnSuccessListener(aVoid -> {
-                    Toast.makeText(ApplicationClass.getAppContext(), "Status updated", Toast.LENGTH_SHORT).show();
+        CollectionReference loginDetails = db.collection(Constant.LOGIN_DETAILS);
+        // Create a query to find the document with the given userId
+        Query query = loginDetails.whereEqualTo("userId", userId);
+        query.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                for (QueryDocumentSnapshot document : task.getResult()) {
+                    // Get the document ID for the matched document
+                    String documentId = document.getId();
 
-                    // User status updated successfully
-                })
-                .addOnFailureListener(e -> {
+                    Map<String, Object> updateDetails = new HashMap<>();
+                    updateDetails.put("disabled", !disabled);
 
-                    Toast.makeText(ApplicationClass.getAppContext(), "Somethings went wrong", Toast.LENGTH_SHORT).show();
+                    // Update the liveType field from 0 to 1
+                    loginDetails.document(documentId)
+                            .update(updateDetails)
+                            .addOnSuccessListener(aVoid -> {
+                                Toast.makeText(fragmentActivity, "User status changed", Toast.LENGTH_SHORT).show();
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.i("sdfdf", "setDisabledStatus: "+e.getMessage());
 
-                    // Handle update failure
-                });
+                            });
+                }
+            } else {
+                Log.e("UpdateLiveType", "Error getting documents: ", task.getException());
+            }
+        });
+//        db.collection(Constant.LOGIN_DETAILS).document(userId)
+//                .update("disabled", disabled)
+//                .addOnSuccessListener(aVoid -> {
+//                    Toast.makeText(ApplicationClass.getAppContext(), "Status updated", Toast.LENGTH_SHORT).show();
+//
+//                    // User status updated successfully
+//                })
+//                .addOnFailureListener(e -> {
+//
+//                    Toast.makeText(ApplicationClass.getAppContext(), "Somethings went wrong", Toast.LENGTH_SHORT).show();
+//
+//                    // Handle update failure
+//                });
 
 
     }
