@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.adminlive.preetyadminpanel.agency.ui.home.AgencyHomeFragment"
-        android:label="fragment_agency_home"
+        android:label="Users"
         tools:layout="@layout/fragment_agency_home" >
         <action
             android:id="@+id/action_navigation_home_to_agencyHostDetailsFragment"
@@ -21,11 +21,11 @@
     <fragment
         android:id="@+id/profileAgencyFragment"
         android:name="com.adminlive.preetyadminpanel.agency.ui.profile.ProfileAgencyFragment"
-        android:label="fragment_profile_agency"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile_agency" />
     <fragment
         android:id="@+id/agencyHostDetailsFragment"
         android:name="com.adminlive.preetyadminpanel.agency.ui.home.AgencyHostDetailsFragment"
-        android:label="fragment_agency_host_details"
+        android:label="User Details"
         tools:layout="@layout/fragment_agency_host_details" />
 </navigation>

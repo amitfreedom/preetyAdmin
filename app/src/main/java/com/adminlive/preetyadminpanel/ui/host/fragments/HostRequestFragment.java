@@ -100,6 +100,7 @@ public class HostRequestFragment extends Fragment {
                                 args.putString("userId",hostModal.getUserId());
                                 args.putString("uid",hostModal.getUid());
                                 args.putString("screenStatus",hostModal.getStatus());
+                                args.putString("joiningDate",hostModal.getJoiningDate());
 
                                 Navigation.findNavController(requireView()).navigate(R.id.action_hostRequestFragment_to_requestDetailsFragment,args);
 

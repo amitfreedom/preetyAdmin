@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.adminlive.preetyadminpanel.ApplicationClass;
 import com.adminlive.preetyadminpanel.R;
 import com.adminlive.preetyadminpanel.databinding.FragmentProfileAgencyBinding;
 
@@ -29,6 +30,11 @@ public class ProfileAgencyFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        init();
+    }
+
+    private void init() {
+        binding.tvUserCount.setText(ApplicationClass.getSingleton().getTotalUserInsideHost());
     }
 
     @Override

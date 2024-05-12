@@ -73,7 +73,8 @@ public class AgencyHostUser extends RecyclerView.Adapter<AgencyHostUser.ViewHold
 //                String capitalizedText = item.getRealName().substring(0, 1).toUpperCase() + item.getRealName().substring(1);
                 binding.tvSN.setText(String.valueOf(position+1));
                 binding.tvName.setText(capitalizeText(item.getRealName()));
-                binding.tvDate.setText("ID : "+item.getUid());
+                binding.tvDate.setText("Code : "+item.getAgencyCode());
+                binding.tvJoiningDate.setText("Joined : "+item.getJoiningDate());
                 if (!Objects.equals(item.getPhoto(), "")) {
                     Glide.with(context).load(item.getPhoto()).into(binding.ivProfileImage);
                 }else {

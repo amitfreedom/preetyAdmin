@@ -43,7 +43,7 @@ public class RequestDetailsFragment extends Fragment {
     private FragmentRequestDetailsBinding binding;
     private HostModal hostModal;
     private ProgressDialog progressDialog;
-    String name="",phone="",agencyCode="",email="",docType="",cardNumber="",docImage="",photo="",userId="",uid="",screenStatus=null;
+    String name="",phone="",agencyCode="",email="",docType="",cardNumber="",docImage="",photo="",userId="",uid="",screenStatus=null,joiningDate="";
     private FirebaseFirestore db;
     private FirebaseAuth mAuth;
 
@@ -68,6 +68,7 @@ public class RequestDetailsFragment extends Fragment {
             userId=args.getString("userId");
             uid=args.getString("uid");
             screenStatus=args.getString("screenStatus");
+            joiningDate=args.getString("joiningDate");
         }
         return binding.getRoot();
     }
@@ -106,6 +107,7 @@ public class RequestDetailsFragment extends Fragment {
             hostModal.setUid(uid);
             hostModal.setPhoto(photo);
             hostModal.setUserId(userId);
+        hostModal.setJoiningDate(joiningDate);
 
             db.collection(Constant.HOST_REGISTER).document(Objects.equals(value, "1") ?Constant.ACCEPTED:Constant.REJECTED).collection("host").document(userId).set(hostModal).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override

@@ -1,5 +1,6 @@
 package com.adminlive.preetyadminpanel;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -19,9 +20,12 @@ public class ApplicationClass extends Application {
     private static final String TAG = "ApplicationClass";
     FirebaseFirestore db;
     private Context context;
+    @SuppressLint("StaticFieldLeak")
     private static Sharedpref sharedpref;
     private SharedPreferences mPref;
+    @SuppressLint("StaticFieldLeak")
     private static ApplicationClass instance;
+    private static Singleton singleton;
 
     @Override
     public void onCreate() {
@@ -30,6 +34,7 @@ public class ApplicationClass extends Application {
         instance = this;
         context = getApplicationContext();
         sharedpref = new Sharedpref(getApplicationContext());
+        singleton = new Singleton();
         createChannel();
 
         initZEGOSDK();
@@ -62,7 +67,9 @@ public class ApplicationClass extends Application {
         return sharedpref;
     }
 
-
+    public static Singleton getSingleton() {
+        return singleton;
+    }
     public static ApplicationClass getAppContext() {
         return instance;
     }

@@ -52,7 +52,13 @@
                 android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text="0098" />
+
+            <TextView
+                android:id="@+id/tvJoiningDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1234" />
 
         </LinearLayout>
 
