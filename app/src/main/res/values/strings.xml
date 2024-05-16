@@ -65,4 +65,6 @@
     <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
     <string name="fcm_message">FCM Message</string>
     <string name="users">Users</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="change">Change</string>
 </resources>

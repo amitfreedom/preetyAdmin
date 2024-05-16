@@ -18,4 +18,7 @@
     <color name="yellow">#FF9800</color>
     <color name="light_gray">#F2F2F2</color>
     <color name="very_light">#99EDEBEB</color>
+    <color name="gray_666">#666666</color>
+    <color name="app_color3">#F1719D</color>
+    <color name="app_color2">#D947A5E7</color>
 </resources>
