@@ -91,15 +91,36 @@
         android:id="@+id/allUsersFragment"
         android:name="com.adminlive.preetyadminpanel.ui.users.AllUsersFragment"
         android:label="Users"
-        tools:layout="@layout/fragment_all_users" />
+        tools:layout="@layout/fragment_all_users" >
+        <action
+            android:id="@+id/action_allUsersFragment_to_usersDetailsFragment"
+            app:destination="@id/usersDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
     <fragment
         android:id="@+id/liveUserListFragment"
         android:name="com.adminlive.preetyadminpanel.ui.users.LiveUserListFragment"
         android:label="Live Users"
-        tools:layout="@layout/fragment_live_user_list" />
+        tools:layout="@layout/fragment_live_user_list" >
+        <action
+            android:id="@+id/action_liveUserListFragment_to_usersDetailsFragment"
+            app:destination="@id/usersDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
     <fragment
         android:id="@+id/agencyListFragment"
         android:name="com.adminlive.preetyadminpanel.ui.agency.fragment.AgencyListFragment"
         android:label="Agency List"
         tools:layout="@layout/fragment_agency_list" />
+    <fragment
+        android:id="@+id/usersDetailsFragment"
+        android:name="com.adminlive.preetyadminpanel.ui.users.UsersDetailsFragment"
+        android:label="fragment_users_details"
+        tools:layout="@layout/fragment_users_details" />
 </navigation>

@@ -14,6 +14,7 @@
         android:background="@color/white">
 
         <RelativeLayout
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="300dp">
             <androidx.appcompat.widget.AppCompatImageView
@@ -69,6 +70,28 @@
                 android:layout_alignParentLeft="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Level"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Total Coins"
                 style="@style/MediumTextView"/>
 
@@ -105,6 +128,274 @@
                 style="@style/MediumTextView"/>
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sender Coins"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvSenderCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Coins"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvGameCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Status"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Block/UnBlock"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvBlockStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UnBlock"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IND"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LoginType"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvLoginType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvFollowing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                style="@style/MediumTextView"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gray"
+                style="@style/MediumTextView"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/buttonView"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/btnDeleteUser"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Delete User"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/red"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/btnEditUser"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Edit User"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/btnBlockUnblockUser"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Block User"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/red"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/btnDeviceBan"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Device Ban"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/red"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/buttonView1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnKickOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop Live"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red"/>
+
+    </LinearLayout>
 
     </LinearLayout>
 

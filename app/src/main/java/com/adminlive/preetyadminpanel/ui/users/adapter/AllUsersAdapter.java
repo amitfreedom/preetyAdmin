@@ -28,9 +28,15 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.ViewHo
     private List<UserDetailsModel> dataList;
     private Context context;
 
-    public AllUsersAdapter(Context context, List<UserDetailsModel> dataList) {
+    Select select;
+    public interface Select{
+        void onClickView(UserDetailsModel userDetailsModel);
+    }
+
+    public AllUsersAdapter(Context context, List<UserDetailsModel> dataList,Select select) {
         this.context = context;
         this.dataList = dataList;
+        this.select = select;
     }
 
     @NonNull
@@ -46,6 +52,11 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.ViewHo
         UserDetailsModel item = dataList.get(position);
         // Bind data to views using ViewBinding
         holder.bind(item);
+
+        holder.binding.textView.setOnClickListener(view -> {
+            select.onClickView(item);
+        });
+
     }
 
     @Override
@@ -64,13 +75,9 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.ViewHo
         @SuppressLint("SetTextI18n")
         public void bind(UserDetailsModel item) {
             try{
-//                Date date = new Date(item.getLoginTime());
-
-//                SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH);
-//                String formattedDate = sdf.format(date);
-                // Bind data to views
                 binding.tvName.setText(capitalizeText(item.getUsername()));
                 binding.tvDate.setText("ID:"+item.getUid());
+                binding.tvLevel.setText("Lv:"+item.getLevel());
                 if (!Objects.equals(item.getImage(), "")) {
                     Glide.with(context).load(item.getImage()).into(binding.ivProfileImage);
                 }else {

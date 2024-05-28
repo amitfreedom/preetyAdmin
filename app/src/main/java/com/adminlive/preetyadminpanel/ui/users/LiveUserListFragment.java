@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -56,6 +57,11 @@ public class LiveUserListFragment extends Fragment {
         mAdapter = new ActiveUserAdapter(mQuery, new ActiveUserAdapter.OnActiveUserSelectedListener() {
             @Override
             public void onActiveUserSelected(DocumentSnapshot user) {
+                String userId = user.getString("userId");
+                Bundle bundle = new Bundle();
+                bundle.putString("from","0");
+                bundle.putString("userId",userId);
+                Navigation.findNavController(requireView()).navigate(R.id.action_liveUserListFragment_to_usersDetailsFragment,bundle);
 
             }
         }) {

@@ -74,7 +74,16 @@ public class AllUsersFragment extends Fragment {
                             userModalArrayList.add(userDetailsModel);
                         }
 
-                        AllUsersAdapter latestMemberAdapter = new AllUsersAdapter(requireActivity(), userModalArrayList);
+                        AllUsersAdapter latestMemberAdapter = new AllUsersAdapter(requireActivity(), userModalArrayList, new AllUsersAdapter.Select() {
+                            @Override
+                            public void onClickView(UserDetailsModel userDetailsModel) {
+                                Bundle bundle = new Bundle();
+                                    bundle.putString("from","1");
+                                    bundle.putString("userId",userDetailsModel.getUserId());
+                                    Navigation.findNavController(requireView()).navigate(R.id.action_allUsersFragment_to_usersDetailsFragment,bundle);
+
+                            }
+                        });
                         binding.recyclerUsersList.setAdapter(latestMemberAdapter);
                         latestMemberAdapter.notifyDataSetChanged();
 

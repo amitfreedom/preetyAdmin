@@ -9,6 +9,7 @@
     tools:context=".ui.users.AllUsersFragment">
 
     <RelativeLayout
+        android:elevation="3dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,9 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingVertical="4dp"
-            android:nestedScrollingEnabled="false"
             android:visibility="visible"
-            tools:itemCount="6"
             android:paddingStart="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_host_request"/>
